@@ -27,12 +27,12 @@
 }
 
 .input-button{
-  width:20%;
+  width: 20%;
 }
 
 /* Screens larger than mobile */
 @media only screen and (min-width: 768px) {
   .field {
-    width: 30%;
+    width: 40%;
   }
 }

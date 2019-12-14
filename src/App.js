@@ -41,6 +41,7 @@ class App extends Component {
   handleUserInput = event => {
     event.preventDefault();
     this.searchUnsplash(this.state.search);
+    this.setState({ clickedImages: [], score: 0 })
   }
 
   shuffleImages = array => {

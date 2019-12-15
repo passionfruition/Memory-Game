@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Card from "./components/Card/index";
+import Hero from "./components/Hero/index";
+import Input from "./components/Input/index";
 import fetch from 'node-fetch';
 import { toJson } from 'unsplash-js';
 import * as bulmaToast from "bulma-toast";
@@ -86,29 +88,9 @@ class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <section className="hero is-primary is-bold">
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="title is-1">Memory Game</h1>
-              <h2 className="subtitle">Click on an image to earn points, but don't click on any more than once.</h2>
-            </div>
-          </div>
-        </section>
+        <Hero/>
         <progress className="progress is-primary" value={this.state.clickedImages.length} max={this.state.numImages}></progress>
-        <div className="field has-addons">
-          <div className="control text-input">
-            <input value={this.state.search} name="search" className="input is-primary is-medium" onChange={this.handleInputChange} type="text" placeholder="Choose a theme"></input>
-          </div>
-          <div className="control input-button">
-            <button className="button is-primary is-medium" onClick={this.handleUserInput} >Go</button>
-          </div>
-          <div className="score-display">
-            <strong>
-              SCORE: {this.state.score} | HIGH SCORE: {this.state.highScore}
-            </strong>
-          </div>
-        </div>
-        
+        <Input search={this.state.search} handleInputChange={this.handleInputChange} handleUserInput={this.handleUserInput} score={this.state.score} highScore={this.state.highScore}/>
         <div className="card-container">
           {!this.state.images[0] ? <h1 className="subtitle">Hmm.. Try a different term</h1> : this.state.images.map(img => (<Card image={img.urls.regular} key={img.id} id={img.id} clickImage={this.clickImage} />))}
         </div>

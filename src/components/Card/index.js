@@ -1,5 +1,6 @@
 import React from "react";
 import "../Card/style.css";
+
 function Card(props) {
     return(
         <div className="card">

@@ -1,4 +1,4 @@
-// Input form for search term
+// Renders input form for search term
 
 import React from "react";
 

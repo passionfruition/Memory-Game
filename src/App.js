@@ -58,6 +58,7 @@ class App extends Component {
     this.setState({ images: array });
   }
 
+  // Handles each user guess when they click an image
   clickImage = id => {
     // If user wrong
     if (this.state.clickedImages.includes(id)) {

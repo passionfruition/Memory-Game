@@ -1,3 +1,5 @@
+// Renders a photo for photo set
+
 import React from "react";
 import "../Card/style.css";
 

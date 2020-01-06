@@ -18,10 +18,12 @@ class App extends Component {
     numImages: 12
   }
 
+  // Initial photo set theme
   componentDidMount() {
     this.searchUnsplash("minimalist");
   }
 
+  // Uses the Unsplash API for photo set
   searchUnsplash = term => {
     const Unsplash = require('unsplash-js').default;
     const unsplash = new Unsplash({ accessKey: "b76db29ac02281a2820fd80b71b7dbee872602dc5cbf4feac6296ad24dd8608e" });

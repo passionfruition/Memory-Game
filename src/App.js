@@ -34,6 +34,7 @@ class App extends Component {
       });
   }
 
+  // Handles when user is typing input for the photo set theme
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({

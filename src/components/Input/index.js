@@ -1,3 +1,5 @@
+// Input form for search term
+
 import React from "react";
 
 function Input(props) {

@@ -94,10 +94,26 @@ class App extends Component {
     return (
       <div className="wrapper">
         <Hero/>
-        <progress className="progress is-primary" value={this.state.clickedImages.length} max={this.state.numImages}></progress>
-        <Input search={this.state.search} handleInputChange={this.handleInputChange} handleUserInput={this.handleUserInput} score={this.state.score} highScore={this.state.highScore}/>
+        {/* Progress bar */}
+        <progress 
+          className="progress is-primary" 
+          value={this.state.clickedImages.length} 
+          max={this.state.numImages}>        
+        </progress>
+        {/* User input for photo set theme */}
+        <Input 
+          search={this.state.search} 
+          handleInputChange={this.handleInputChange} 
+          handleUserInput={this.handleUserInput} 
+          score={this.state.score} 
+          highScore={this.state.highScore}
+          />
         <div className="card-container">
-          {!this.state.images[0] ? <h1 className="subtitle">Hmm.. Try a different term</h1> : this.state.images.map(img => (<Card image={img.urls.regular} key={img.id} id={img.id} clickImage={this.clickImage} />))}
+          {!this.state.images[0] ? 
+          // If invalid search term, return try again message
+          <h1 className="subtitle">Hmm.. Try a different term</h1> : 
+          // Else display photo set
+          this.state.images.map(img => (<Card image={img.urls.regular} key={img.id} id={img.id} clickImage={this.clickImage} />))}
         </div>
       </div>
     );

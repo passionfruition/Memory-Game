@@ -1,3 +1,5 @@
+// Renders main hero on page
+
 import React from "react";
 
 function Hero() {

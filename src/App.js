@@ -42,12 +42,14 @@ class App extends Component {
     });
   };
 
+  // Registers user submission for photo set theme
   handleUserInput = event => {
     event.preventDefault();
     this.searchUnsplash(this.state.search);
     this.setState({ clickedImages: [], score: 0 })
   }
 
+  // Shuffles photo set after each user guess
   shuffleImages = array => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));

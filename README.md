@@ -1,6 +1,6 @@
 # Memory-Game
 
-This is an memory game where the user's goal is to click a unique image each time to get the most points. If you click a "repeated" card, your score resets to zero. The user can also utilize the input form to choose what pictures they want to see powered from the [Unsplash API](https://unsplash.com/developers). Try the deployed version [here](https://madeleineprak.github.io/Memory-Game/).
+This is an memory game where the user's goal is to click a unique image each time to get the most points. If you click a "repeated" card, your score resets to zero. The user can also utilize the input form to choose what pictures they want to see powered from the [Unsplash API](https://unsplash.com/developers). Try the deployed version here: [https://madeleineprak.github.io/Memory-Game/](https://madeleineprak.github.io/Memory-Game/).
 
 ## Technologies Used
 * React
